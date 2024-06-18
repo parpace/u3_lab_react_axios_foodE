@@ -2,6 +2,10 @@
 
 ![erdgraph](https://i.imgur.com/rphjeOF.png)
 
+# WIREFRAME 
+
+![wireframe](https://i.imgur.com/3wdONGg.png)
+
 What do we want the App to do
 
 When we open the App : 
