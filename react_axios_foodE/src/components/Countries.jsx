@@ -51,7 +51,3 @@ export default function Travel() {
         </div>
     )
 }
-
-
-
-
