@@ -31,8 +31,9 @@ export default function DishDetails () {
                 <p style={{ color: 'red' }}>{errorMessage}</p>
             ) : (
                 <div>
-                    <h1>{dish.strMeal}</h1>
                     <img src={dish.strMealThumb} alt={dish.strMeal}/>
+                    <h1>{dish.strMeal}</h1>
+                    {/* ingredients here */}
                     <h3>{dish.strInstructions}</h3>
                 </div>
             )}
