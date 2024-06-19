@@ -1,17 +1,30 @@
+
 body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0;
 }
 
+
 .countryImage {
- width: 15rem;
- height: 19rem;
- object-fit: cover;
+  width: 15rem;
+  height: 19rem;
+  object-fit: cover;
 }
 
 .Countries {
   display: flex;
   flex-wrap: wrap;
   gap: 5%;
+  padding: 20px;
 }
+
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+
