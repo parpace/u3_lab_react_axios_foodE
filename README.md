@@ -2,9 +2,10 @@
 
 ![erdgraph](https://i.imgur.com/rphjeOF.png)
 
-What do we want the App to do
+# WIREFRAME 
 
-When we open the App : 
+![wireframe](https://i.imgur.com/3wdONGg.png)
+
 
 ## Header 
 * Website Name 
