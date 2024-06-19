@@ -1,5 +1,5 @@
-export default function Travel () {
+export default function Countries () {
     return (
-        <h1>Travel</h1>
+        <h1>Countries</h1>
     )
 }

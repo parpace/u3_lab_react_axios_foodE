@@ -1,5 +1,32 @@
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+
 export default function Categories () {
+    
+    const [categories, setCategories] = useState([])
+
+    useEffect(() => {
+        const getCategories = async () => {
+            const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/categories.php`)
+
+            console.log(response)
+
+            setCategories(response.data.categories)
+        }
+        getCategories()
+    }, [])
+    
     return (
-        <h1>Categories</h1>
+        <div>
+            <h1>Categories</h1>
+            <div className="categoryList">
+                {categories.map((category) => (
+                    // <Link key={category.idCategory} to={`/dishes/${category.idCategory}`}>
+                        <div className="category" key={category.idCategory}>
+                            <h3 style={{backgroundImage: `url(${category.strCategoryThumb})`}}>{category.strCategory}</h3>
+                        </div>
+                ))}
+            </div>
+        </div>
     )
 }
