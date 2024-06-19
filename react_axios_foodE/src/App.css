@@ -6,20 +6,11 @@ body {
   margin: 0;
 }
 
-
 .countryImage {
   width: 15rem;
   height: 19rem;
   object-fit: cover;
 }
-
-.Countries {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5%;
-  padding: 20px;
-}
-
 
 .carousel-item img {
   width: 100%;
