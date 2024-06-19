@@ -5,23 +5,37 @@ import axios from 'axios'
 export default function DishDetails () {
     
     const [dish, setDish] = useState('')
-
+    const [errorMessage, setErrorMessage] = useState('')
     const { selectedDish } = useParams()
 
     useEffect(() => {
         const getDish = async () => {
             const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${selectedDish}`)
+
             console.log(response.data.meals)
-            setDish(response.data.meals[0])
+
+            if (response.data.meals) {
+                setDish(response.data.meals[0])
+                setErrorMessage('')
+            } else {
+                setDish('')
+                setErrorMessage(`Sorry, we don't have this dish. Try another one!`)
+            }
         }
         getDish()
     }, [selectedDish])
     
     return (
         <div className='categoryMealContainer'>
-            <h1>{dish.strMeal}</h1>
-            <img src={dish.strMealThumb} alt={dish.strMeal}/>
-            <h3>{dish.strInstructions}</h3>
+            {errorMessage ? (
+                <p style={{ color: 'red' }}>{errorMessage}</p>
+            ) : (
+                <div>
+                    <h1>{dish.strMeal}</h1>
+                    <img src={dish.strMealThumb} alt={dish.strMeal}/>
+                    <h3>{dish.strInstructions}</h3>
+                </div>
+            )}
         </div>
     )
 }
