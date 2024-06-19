@@ -1,6 +1,6 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
-import { Link } from 'react-router-dom'
+import Carousel from 'react-bootstrap/Carousel'
 
 export default function Travel() {
     const [countries, setCountries] = useState([])
@@ -38,16 +38,22 @@ export default function Travel() {
 
     return (
         <div className="Countries">
-            {countries.map((country) => (
-                <Link key={country.countryName} to={`/dishes/country/${country.countryName}`}>
-                    <div key={country.countryName} className="countryCard">
-                        <h2>{country.countryName}</h2>
-                            <div>
-                                <img className="countryImage" src={country.meals[0].mealImage} alt={country.meals[0].mealName} />
-                            </div>
-                    </div>
-                </Link>
-            ))}
+            <Carousel>
+                {countries.map((country) => (
+                    <Link key={country.countryName} to={`/dishes/country/${country.countryName}`}>
+                        <Carousel.Item key={country.countryName}>
+                            <img
+                                className="d-block w-100"
+                                src={country.meals[0].mealImage}
+                                alt={country.meals[0].mealName}
+                            />
+                            <Carousel.Caption>
+                                <h3>{country.countryName}</h3>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+                    </Link>
+                ))}
+            </Carousel>
         </div>
     )
 }
