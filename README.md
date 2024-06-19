@@ -48,3 +48,12 @@ Stretch Goal
     * Surprise 
     (make axios call to that random meal api link, when you click on surprise it will take you to /dishDetails)
 * Wednesday
+
+
+## Recipe Page 
+
+1. image 
+1. strMeal
+1. ingredients 
+    1. {.ingredients}: {.strMeasure}  
+1. strInstructions
