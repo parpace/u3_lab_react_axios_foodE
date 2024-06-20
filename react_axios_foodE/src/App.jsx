@@ -9,6 +9,7 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
 
   const [favorites, setFavorites] = useState([])
+  console.log (favorites)
 
   return (
     <>

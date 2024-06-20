@@ -35,7 +35,7 @@ export default function Travel() {
         getCountries()
     }, [])
 
-    console.log(countries)
+    // console.log(countries)
     return (
         <div>
             <h2 className="TravelText">TRAVEL.</h2>

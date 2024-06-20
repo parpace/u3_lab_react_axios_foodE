@@ -13,8 +13,8 @@ export default function IngredientDishes () {
         const getIngredientMeals = async () => {
             const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${selectedIngredient}`)
 
-            console.log(selectedIngredient)
-            console.log(response)
+            // console.log(selectedIngredient)
+            // console.log(response)
 
             if (response.data.meals) {
                 setMeals(response.data.meals)
