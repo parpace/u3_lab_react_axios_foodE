@@ -151,7 +151,7 @@ h3{
   text-align: center;
 }
 
-input { 
+input, textarea{ 
   border: none;
   border-radius: 5px;
   padding: 5px;
@@ -159,7 +159,7 @@ input {
   font-weight: 200;
 }
 
-input:focus {
+input:focus, textarea:focus {
   outline: 2px solid #7689DE;
 }
 
@@ -486,20 +486,46 @@ margin-top: 20%;
 
 .footer{
   font-size: larger;
+  margin-right: 500p
 }
-.MealDiv {
-  display: flex;
-  justify-content: space-around;
-  gap: 100%;
-}
+
 .mealform {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 
 #ingredients, #instruction {
   height: 30px;
   border: none;
   border-radius: 5px;
+}
+.psubmit {
+  margin-bottom: 50px;
+  color:#A9BCE3;
+  font-style: italic;
+}
+.recipesubmit {
+  font-family: "urbanist", sans-serif;
+  font-size: 2em;
+  color:#FF7653
+}
+.Button{
+  width: 100px;
+  margin-left:90px;
+}
+
+.MealLabel {
+  font-family: "Urbanist", sans-serif;
+  color:#7689DE;
+}
+
+.MealDiv {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 50%;
+}
+
+.submitAll {
+  margin-left: 00px;
 }
