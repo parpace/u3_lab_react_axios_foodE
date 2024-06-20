@@ -151,6 +151,10 @@ h3{
   text-align: center;
 }
 
+.favoritesText:hover{
+  color: #FF7653;
+}
+
 input, textarea{ 
   border: none;
   border-radius: 5px;
@@ -476,13 +480,18 @@ margin-top: 20%;
   font-weight: 900;
 }
 
-.favButton, .Button{
+.favButton, .Button, .unfavButton{
   background-color: #FF7653;
   font-family: "Urbanist", sans-serif;
   color:white;
 
 }
+
+.favButton:active, .Button:active, .unfavButton:active{
+  background-color: #7689DE;
+}
 /* footer */
+
 
 .footer{
   font-size: larger;
@@ -520,12 +529,21 @@ margin-top: 20%;
   color:#7689DE;
 }
 
-.MealDiv {
-  display: flex;
-  justify-content: space-between;
-  margin-left: 50%;
-}
+
 
 .submitAll {
-  margin-left: 00px;
+  margin-right: 50vw;
+}
+
+.unfavButton {
+ padding: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0 auto;
+ margin-top: -20px;
+}
+
+.favoriteDishesContainer {
+  margin-bottom: 190px;
 }
