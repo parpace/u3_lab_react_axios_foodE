@@ -4,6 +4,7 @@ import DishDetails from './dishes/DishDetails'
 import CategoryDishes from './dishes/CategoryDishes'
 import CountryDishes from './dishes/CountryDishes'
 import IngredientDishes from './dishes/IngredientDishes'
+import FavoriteDishes from './dishes/FavoriteDishes'
 
 export default function Main () {
     return (
@@ -13,6 +14,7 @@ export default function Main () {
                 <Route path='/dishes/category/:selectedCategory' element={<CategoryDishes/>}/>
                 <Route path='/dishes/ingredient/:selectedIngredient' element={<IngredientDishes/>}/>
                 <Route path='/dishes/country/:selectedCountry' element={<CountryDishes/>}/>
+                <Route path='/dishes/favoriteDishes' element={<FavoriteDishes/>}/>
                 <Route path='/dishes/:selectedDish' element={<DishDetails/>}/>
             </Routes>
         </div>
