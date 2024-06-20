@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import Likes from './likes'
+import Input from './Input'
 
 export default function DishDetails () {
     
@@ -8,6 +10,8 @@ export default function DishDetails () {
     const [ingredients, setIngredients] = useState([])
     const [errorMessage, setErrorMessage] = useState('')
     const { selectedDish } = useParams()
+    const [count, setCount] = useState(0)
+  
 
     useEffect(() => {
         const getDish = async () => {
@@ -39,6 +43,14 @@ export default function DishDetails () {
         }
         getDish()
     }, [selectedDish])
+
+
+    const addCount = () => {
+        setCount(count + 1)
+      }
+
+
+
     
     return (
         <div className='dishDetails'>
@@ -56,10 +68,15 @@ export default function DishDetails () {
                             ))}
                         </div>
                         <p className='instructions'>{dish.strInstructions}</p>
+
+                        <Input className='inputLike' addCount={addCount} />
+                       <Likes className='likeCount'count={count} />
                     </div>
                 )
             )}
+        
         </div>
+        
     )
 }
 
