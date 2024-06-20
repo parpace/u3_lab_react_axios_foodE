@@ -71,7 +71,7 @@ export default function DishDetails () {
                         </ul>
                         <p className='instructions'>{dish.strInstructions}</p>
 
-                        <Input className='inputLike' addCount={addCount} />
+                        <Input className='inputLikes' addCount={addCount} />
                        <Likes className='likeCount'count={count} />
 
                     </div>
