@@ -45,12 +45,19 @@ export default function DishDetails () {
             {errorMessage ? (
                 <p style={{ color: 'red' }}>{errorMessage}</p>
             ) : (
-                <div className='dishDetail'>
-                    <img className="recipePic"src={dish.strMealThumb} alt={dish.strMeal}/>
-                    <h1 className='mealName'>{dish.strMeal}</h1>
-                    <ul className='ingredients'><li>{/* ingredients here */}</li></ul>
-                    <h3 className='instructions'>{dish.strInstructions}</h3>
-                </div>
+                // Again, things weren't working without this "dish &&". ChaptGPT identified that my html here was trying to read the dish state while it was still null, so I needed to ensure that it doesn't render unless dish is not falsy.
+                dish && (
+                    <div className='dishDetail'>
+                        <img className="recipePic" src={dish.strMealThumb} alt={dish.strMeal}/>
+                        <h1 className='mealName'>{dish.strMeal}</h1>
+                        <div className='ingredients'>
+                            {ingredients.map((item, index) => (
+                                <p key={index}>{item.ingredient}: {item.measure}</p>
+                            ))}
+                        </div>
+                        <p className='instructions'>{dish.strInstructions}</p>
+                    </div>
+                )
             )}
         </div>
     )
