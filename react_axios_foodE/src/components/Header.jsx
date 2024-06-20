@@ -32,6 +32,9 @@ export default function Header() {
             <Link className="title-link" to="/">
                 <h1 className="page-title" style={{ cursor: 'pointer' }}>THE RECIPE.</h1>
             </Link>
+            <Link className='favorites-link' to="/dishes/favoriteDishes">
+                <h3>Favorites</h3>
+            </Link>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 

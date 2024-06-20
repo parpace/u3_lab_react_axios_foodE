@@ -13,8 +13,8 @@ export default function CountryDishes () {
         const getCountryMeals = async () => {
             const response = await axios.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${selectedCountry}`)
 
-            console.log(selectedCountry)
-            console.log(response)
+            // console.log(selectedCountry)
+            // console.log(response)
 
             if (response.data.meals) {
                 setMeals(response.data.meals)
