@@ -2,7 +2,7 @@
 const Input = (props) => {
   return (
     <div>
-      <button className="Like" onClick={props.addCount}>Like</button>
+      <img src="https://i.imgur.com/gwWDvmD.png" className="Like" onClick={props.addCount}/>
     </div>
   );
 }

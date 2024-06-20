@@ -37,10 +37,10 @@ export default function Travel() {
 
     // console.log(countries)
     return (
-        <div>
+        <div className="countriesMain">
+            <div className="countriesCarou">
             <h2 className="TravelText">TRAVEL.</h2>
         <div className="Countries">
-            
             <Carousel className="c-universe">
                 {countries.map((country, index) => (
                     index % 3 === 0 ? (
@@ -69,6 +69,7 @@ export default function Travel() {
                     ) : null
                 ))}
             </Carousel>
+            </div>
         </div>
        </div> 
     )

@@ -23,6 +23,9 @@ export default function Footer () {
     return (
         <div className="MealDiv">
         <h1 className="footer">THE RECIPE.</h1>
+        <div className='submitAll'>
+        <h1>Submit a recipe.</h1>
+        <p>we may approve it, we may not.</p>
         <form className="mealform" onSubmit={handleSubmit}>
                        <label className="MealLabel" htmlFor="mealName">Meal Name:</label>
                             <input
@@ -47,8 +50,10 @@ export default function Footer () {
                                onChange={handleChange}
                                   value={formState.Instruction}
                                                ></textarea>
+                                               
                            <button className="Button" type="submit">Send</button>
                        </form>
+                      </div> 
         </div>
     )
 }
