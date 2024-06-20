@@ -6,7 +6,7 @@ import axios from 'axios'
 export default function FavoriteDishes () {
 
     const { favorites, setFavorites } = useContext(FavoriteContext)
-    const [favoriteDishes, setFavoriteDishes] = useState()
+    const [favoriteDishes, setFavoriteDishes] = useState([])
 
     useEffect(() => {
         const getFavoriteDishes = async () => {
@@ -28,13 +28,18 @@ export default function FavoriteDishes () {
     }, [favorites])
 
     const removeFromFavorites = (idMeal) => {
-        setFavorites(favorites.filter(id => id !== idMeal))
+        const newFavorites = favorites.filter(id => id !== idMeal)
+        setFavorites(newFavorites)
+
+        // ChatGPT had to help here, as the change was not immediately taking effect when there was only 1 favorite left.
+        const newFavoriteDishes = favoriteDishes.filter(dish => dish.idMeal !== idMeal)
+        setFavoriteDishes(newFavoriteDishes)
     }
 
     return (
         <div className='favoriteDishesContainer'>
             <h1 className='pageTitle'>Favorite Dishes</h1>
-            {favoriteDishes ? (
+            {favoriteDishes.length > 0 ? (
                 <div className="categoryMealList">
                     {favoriteDishes.map((dish) => (
                         <div key={dish.idMeal} className="dish">
