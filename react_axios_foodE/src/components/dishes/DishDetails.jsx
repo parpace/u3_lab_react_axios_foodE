@@ -55,7 +55,6 @@ export default function DishDetails () {
                                 <p key={index}>{item.ingredient}: {item.measure}</p>
                             ))}
                         </div>
-                        <h3>Instructions</h3>
                         <p className='instructions'>{dish.strInstructions}</p>
                     </div>
                 )
