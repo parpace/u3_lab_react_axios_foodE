@@ -62,3 +62,9 @@ export default function DishDetails () {
         </div>
     )
 }
+
+// changes kass made 
+// added div classname above img
+// changed category classname
+// added classname to img 
+// added classname to h1 and h2

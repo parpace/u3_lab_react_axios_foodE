@@ -1,3 +1,5 @@
+
+
 #root {
   display: flex;
   justify-content: center;
@@ -5,7 +7,10 @@
   margin: 0 auto;
   flex-direction: column;
   text-decoration: none;
+  background-color: #EBE9E1;
 }
+
+/* COUNTRIES STYLING */
 .carousel-control-next, .carousel-control-prev {
   border-radius: 30px;
 }
@@ -14,27 +19,24 @@
 }
 
 .Countries {
-  max-width: 80%;
-  background-color: #A9BCE3;
+  width: 1000px;
+  background-color: #a9bce3aa;
   border-radius: 30px;
+  margin: 0 auto;
 }
-
-.c-img {
-  height: 100%;
-  object-fit: cover;
-  width: 1400%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 30px;
-  margin: 30px 0px 0px 20px;
-}
-
-
-
 
 .country-card-wrapper {
   position: relative;
-  width: 20px;
+  width: 6%;
+}
+.c-img {
+  height: 100%;
+  object-fit: cover;
+  width: 15rem;
+  height: 17rem;
+  object-fit: cover;
+  border-radius: 30px;
+  margin: 4vh 0px 0px 12vh;
 }
 
 .countries-link {
@@ -58,17 +60,312 @@ h3, h5 {
 }
 
 .country-card-overlay {
+  display: flex;
+  justify-content: space-between;
   position: relative;
-  margin-top: -15vh;
-  margin-left: 4vh;
+  margin-top: -30.5vh;
+  margin-left: 10vh;
   width: 5%;
-  z-index: 2;
-  font-size: 200%;
+  font-size: 170%;
+  padding-left: 20px;
 }
 
 .card-title { 
   font-size: larger;
-  letter-spacing: 10px;
+  letter-spacing: 2px;
   word-wrap: normal;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
 }
 
+.TravelText {
+  position: relative;
+  color:#7689DE;
+  margin-left:4%;
+  margin-bottom: 12px;
+  text-shadow:  2px 1px #FF7653;
+}
+
+/* HEADER STYLING */
+
+.Header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 70%;
+  position: relative;
+  margin-bottom: 200px;
+  margin-top: 70px;
+}
+
+.page-title, form {
+  z-index: 2;
+  position: relative;
+}
+
+.BlueCircle, .BlueCircle2, .BlueCircle3{ 
+  background-color: #A9BCE3;
+  z-index:1;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  position: absolute;
+  margin-top: -350px;
+}
+
+.BlueCircle {
+  margin-left: -100%;
+}
+
+.BlueCircle2 {
+  background-color: #7689DE;
+}
+
+.BlueCircle3 {
+  margin-left: 100%;
+}
+h3{
+  position: relative;
+  z-index: 2;
+}
+
+.title-link {
+    text-decoration: none;
+    color: white;
+}
+.page-title {
+  margin-left: -100%;
+  font-size: 400%;
+  letter-spacing: .5rem;
+} 
+
+input { 
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 200;
+}
+
+input:focus {
+  outline: 2px solid #7689DE;
+}
+
+select { 
+  font-family: "Urbanist", sans-serif;
+  border-radius: 5px;
+  font-weight: 100;
+  text-transform: lowercase;
+  border: none;
+}
+
+.search-by{
+  font-family: "Urbanist", sans-serif;
+  margin-top: 20px;
+  text-align: center;
+  font-weight: 300;
+  color: white;
+  margin-left: -2vw;
+}
+
+/* SURPRISE STYLING */
+
+.randomContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  word-wrap: normal;
+  margin-bottom: 120px;
+}
+
+.surpriseLink { 
+  text-decoration: none;
+}
+.boldText {
+  position: absolute;
+  font-size: 3.40em; 
+  margin-left: 5px;
+  margin-top: 14px;
+  letter-spacing: .1em;
+  z-index: 2;
+  color: white;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.radomImage {
+  position: relative;
+  width: 250px;
+  z-index: 1;
+  border-radius: 10px;
+  filter: blur(3px);
+  box-shadow:  2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.surpriseText { 
+  width: 300px;
+}
+
+.randomText { 
+  color:#FF7653;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  line-height: 150%;
+  max-width: 300vw;
+}
+
+.blueDiv {
+  position: relative;
+  background-color: #a9bce3aa;
+  padding: 20px;
+  max-width: 300px;
+  max-height: 300px;
+  border-radius: 10px;
+  margin-left: 220px;
+}
+
+/* CATEGORIES */
+
+
+
+.categoriesTitle, .TravelText {
+  font-family: "Urbanist", sans-serif;
+  text-transform: uppercase;
+  font-size: 4em;
+  font-weight:700;
+}
+
+.categoriesTitle {
+  color:#FF7653;
+  margin-left: 65vw;
+  margin-bottom: 12px;
+  margin-top: 120px;
+  text-shadow:  2px 1px #7689DE;
+}
+
+.categoryList {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  margin: 40px 0px 100px 100px;
+}
+
+
+.mealPic {
+  margin-bottom:90px;
+  max-width: 80%;
+}
+
+/* CATEGORY DISHES */
+
+.categoryMealList {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.mealImg {
+  margin:90px;
+  width: 250px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+.pageTitle, .mealName {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 600;
+  text-transform: lowercase;
+  color:#FF7653;
+  text-shadow:  2px 1px #7689DE;
+}
+
+.pageTitle {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.mealLink { 
+  text-decoration: none;
+  color:#7689DE;
+  text-transform: lowercase;
+}
+
+.mealTitle {
+  font-family: "Urbanist", sans-serif;
+  font-weight: 300;
+  font-size: 1.2em;
+  margin-top: -80px;
+  margin-bottom: 50px;
+  word-wrap: normal;
+  max-width: 70%;
+  margin-left: 20%;
+}
+
+/* DISH DETAILS */
+
+.dishDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 60%;
+}
+
+.recipePic {
+  width: 550px;
+  height: 300px;
+  border-radius: 30px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.instructions {
+  text-transform: lowercase;
+  font-weight: 300;
+}
+
+.ingredients{ 
+  font-family: "Urbanist", sans-serif;
+  font-size: 1.9em;
+  text-transform: lowercase;
+  font-weight: 400;
+  color:#7689DE;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li::marker {
+  content: "✿"; 
+  color:#FF7653;
+  font-size: 1.2em; 
+  animation: spin 2s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(10deg); 
+  }
+  100% {
+    transform: rotate(-10deg); 
+  }
+}
+
+/* footer */
+
+.footer{
+  font-size: larger;
+}

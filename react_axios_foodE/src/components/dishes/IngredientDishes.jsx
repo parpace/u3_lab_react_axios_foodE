@@ -29,20 +29,21 @@ export default function IngredientDishes () {
     
     return (
         <div className='categoryMealContainer'>
-            <h1>Dishes with {selectedIngredient}</h1>
-            {errorMessage ? (
-                <p style={{ color: 'red' }}>{errorMessage}</p>
-            ) : (
-                <div className="categoryMealList">
-                    {meals.map((meal) => (
-                        <Link key={meal.idMeal} to={`/dishes/${meal.idMeal}`}>
-                            <div className="dish" key={meal.idMeal}>
-                                <h3 style={{backgroundImage: `url(${meal.strMealThumb})`}}>{meal.strMeal}</h3>
-                            </div>
-                        </Link>
-                    ))}
-                </div>
-            )}
-        </div>
-    )
+        <h1 className='pageTitle'>{selectedIngredient}.</h1>
+        {errorMessage ? (
+            <p style={{ color: 'red' }}>{errorMessage}</p>
+        ) : (
+            <div className="categoryMealList">
+                {meals.map((meal) => (
+                    <Link className="mealLink" key={meal.idMeal} to={`/dishes/${meal.idMeal}`}>
+                        <div className="dish" key={meal.idMeal}>
+                            <img className="mealImg" src={meal.strMealThumb}/>
+                            <h3 className='mealTitle'>{meal.strMeal}.</h3>
+                        </div>
+                    </Link>
+                ))}
+            </div>
+        )}
+    </div>
+)
 }
