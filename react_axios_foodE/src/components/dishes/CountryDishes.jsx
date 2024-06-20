@@ -29,15 +29,16 @@ export default function CountryDishes () {
     
     return (
         <div className='categoryMealContainer'>
-            <h1>{selectedCountry} Dishes</h1>
+            <h1 className='pageTitle'>{selectedCountry}.</h1>
             {errorMessage ? (
                 <p style={{ color: 'red' }}>{errorMessage}</p>
             ) : (
                 <div className="categoryMealList">
                     {meals.map((meal) => (
-                        <Link key={meal.idMeal} to={`/dishes/${meal.idMeal}`}>
+                        <Link className="mealLink" key={meal.idMeal} to={`/dishes/${meal.idMeal}`}>
                             <div className="dish" key={meal.idMeal}>
-                                <h3 style={{backgroundImage: `url(${meal.strMealThumb})`}}>{meal.strMeal}</h3>
+                                <img className="mealImg" src={meal.strMealThumb}/>
+                                <h3 className='mealTitle'>{meal.strMeal}.</h3>
                             </div>
                         </Link>
                     ))}
@@ -46,3 +47,6 @@ export default function CountryDishes () {
         </div>
     )
 }
+
+// changes kass made 
+// same changes as other dish detail

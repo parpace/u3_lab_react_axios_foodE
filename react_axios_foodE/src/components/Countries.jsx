@@ -1,7 +1,7 @@
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import Carousel from 'react-bootstrap/Carousel'
+import { Carousel, Card, Stack, Button } from "react-bootstrap";
 
 export default function Travel() {
     const [countries, setCountries] = useState([])
@@ -36,26 +36,40 @@ export default function Travel() {
     }, [])
 
     console.log(countries)
-
     return (
+        <div>
+            <h2 className="TravelText">TRAVEL.</h2>
         <div className="Countries">
-            <Carousel>
-                {countries.map((country) => (
-                    
-                        <Carousel.Item key={country.countryName}>
-                            <Link key={country.countryName} to={`/dishes/country/${country.countryName}`}>
-                            <img
-                                className="d-block w-100"
-                                src={country.meals[0].mealImage}
-                                alt={country.meals[0].mealName}
-                            />
-                            <Carousel.Caption>
-                                <h3>{country.countryName}</h3>
-                            </Carousel.Caption>
-                            </Link>
+            
+            <Carousel className="c-universe">
+                {countries.map((country, index) => (
+                    index % 3 === 0 ? (
+                        <Carousel.Item key={index} className="c-item">
+                            <div className="row">
+                                {countries.slice(index, index + 3).map((country) => (
+                                    country.countryName !== 'unknown' && (
+                                        <div key={country.countryName} className="key col-md-3">
+                                            <Link to={`/dishes/country/${country.countryName}`} className="countries-link">
+                                                <div className="country-card-wrapper">
+                                                    <img
+                                                        className="d-block c-img"
+                                                        src={country.meals[0].mealImage}
+                                                        alt={country.meals[0].mealName}
+                                                    />
+                                                    <div className="country-card-overlay">
+                                                        <h5 className="card-title">{country.countryName}.</h5>
+                                                    </div>
+                                                </div>
+                                            </Link>
+                                        </div>
+                                    )
+                                ))}
+                            </div>
                         </Carousel.Item>
+                    ) : null
                 ))}
             </Carousel>
         </div>
+       </div> 
     )
 }
