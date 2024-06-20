@@ -281,6 +281,7 @@ select {
 
 .pageTitle, .mealName {
   font-family: "Urbanist", sans-serif;
+  margin-top: 200px;
   font-weight: 600;
   text-transform: lowercase;
   color:#FF7653;
@@ -321,24 +322,48 @@ select {
 }
 
 .recipePic {
-  width: 250px;
-  height: 300px;
+  width: 350px;
+  height: 400px;
   border-radius: 30px;
   object-fit: cover;
   margin-bottom: 20px;
+  background: url(https://i.imgur.com/RrbsqcC.png);
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.187);
+}
+.instructions {
+  line-height: 1.6; 
+  text-transform: lowercase;
+  font-weight: 400;
+  text-indent: 1em;
+  color:#7689DE;
 }
 
-.instructions {
-  text-transform: lowercase;
-  font-weight: 300;
+.instructions::before {
+  content: '';
+  display: block;
+  height: 10px; 
+  background-image: url(https://i.imgur.com/iCuSfqt.png); 
+  margin-bottom: 10px; 
 }
+
+.instructions::after {
+  content: '';
+  display: block;
+  height: 9px; 
+  background-image: url(https://i.imgur.com/Ftr1G6y.png); 
+  margin-top: 10px; 
+}
+
 
 .ingredients{ 
   font-family: "Urbanist", sans-serif;
-  font-size: 1.9em;
+  font-size: 1.2em;
   text-transform: lowercase;
   font-weight: 400;
   color:#7689DE;
+  column-count: 2;
+  column-gap: 50px; 
 }
 
 ul {
@@ -366,6 +391,56 @@ ul li::marker {
   100% {
     transform: rotate(-10deg); 
   }
+}
+
+.ingredientTitle {
+  color:#7689DE;
+  text-shadow: 1px 1px #FF7653;
+  margin-left: 20px;
+}
+
+.ingredients::before {
+  content: '';
+  display: block;
+  height: 10px; 
+  background-image: url(https://i.imgur.com/iCuSfqt.png); 
+  margin-bottom: 10px; 
+}
+
+.ingredients::after {
+  content: '';
+  display: block;
+  height: 9px; 
+  background-image: url(https://i.imgur.com/Ftr1G6y.png); 
+  margin-top: 10px; 
+}
+
+.instructionsTitle {
+  color:#FF7653;
+text-shadow: 1px 1px #7689DE;
+}
+.imageName {
+  display: flex;
+  justify-content: space-between;
+  gap: 90px;
+  
+}
+.mealName{
+text-transform: uppercase;
+margin-top: 20%;
+}
+
+.ingredientInstructions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10%;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.ingredientGroup {
+  margin-left: 1rem;
 }
 
 /* footer */
