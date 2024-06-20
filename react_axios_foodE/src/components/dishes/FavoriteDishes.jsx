@@ -5,7 +5,7 @@ import axios from 'axios'
 
 export default function FavoriteDishes () {
 
-    const { favorites } = useContext(FavoriteContext)
+    const { favorites, setFavorites } = useContext(FavoriteContext)
     const [favoriteDishes, setFavoriteDishes] = useState()
 
     useEffect(() => {
@@ -27,22 +27,31 @@ export default function FavoriteDishes () {
         getFavoriteDishes()
     }, [favorites])
 
-    return(
+    const removeFromFavorites = (idMeal) => {
+        setFavorites(favorites.filter(id => id !== idMeal))
+    }
+
+    return (
         <div className='favoriteDishesContainer'>
-            {favoriteDishes && (
-                <div>
-                    <h1 className='pageTitle'>Favorite Dishes</h1>
-                    <div className="categoryMealList">
-                        {favoriteDishes.map((dish) => (
-                            <Link className="mealLink" key={dish.idMeal} to={`/dishes/${dish.idMeal}`}>
-                                <div className="dish" key={dish.idMeal}>
-                                    <img className="mealImg" src={dish.strMealThumb}/>
-                                    <h3 className='mealTitle'>{dish.strMeal}.</h3>
-                                </div>
+            <h1 className='pageTitle'>Favorite Dishes</h1>
+            {favoriteDishes ? (
+                <div className="categoryMealList">
+                    {favoriteDishes.map((dish) => (
+                        <div key={dish.idMeal} className="dish">
+                            <Link className="mealLink" to={`/dishes/${dish.idMeal}`}>
+                                <img className="mealImg" src={dish.strMealThumb} alt={dish.strMeal} />
+                                <h3 className='mealTitle'>{dish.strMeal}</h3>
                             </Link>
-                        ))}
-                    </div>
+                            <button 
+                                className='favButton' 
+                                onClick={() => removeFromFavorites(dish.idMeal)}>
+                                Remove From Favorites
+                            </button>
+                        </div>
+                    ))}
                 </div>
+            ) : (
+                <p>You have no favorite dishes yet!</p>
             )}
         </div>
     )
