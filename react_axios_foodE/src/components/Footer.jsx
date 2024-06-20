@@ -17,12 +17,8 @@ export default function Footer () {
       }
 
       const handleChange = event => {
-        setFormState({ ...formState, [event.target.id]: event.target.value });
-      };
-
-
-
-     console.log(handleSubmit)
+        setFormState({ ...formState, [event.target.id]: event.target.value })
+      }
      
     return (
         <div className="MealDiv">

@@ -13,8 +13,8 @@ export default function CategoryDishes () {
         const getCategoryMeals = async () => {
             const response = await axios.get(`https:www.themealdb.com/api/json/v1/1/filter.php?c=${selectedCategory}`)
 
-            console.log(selectedCategory)
-            console.log(response)
+            // console.log(selectedCategory)
+            // console.log(response)
             
             if (response.data.meals) {
                 setMeals(response.data.meals)
