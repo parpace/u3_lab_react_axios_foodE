@@ -345,6 +345,10 @@ ul {
   list-style-type: none;
 }
 
+ul li {
+  padding-left: 10px;
+}
+
 ul li::marker {
   content: "✿"; 
   color:#FF7653;
