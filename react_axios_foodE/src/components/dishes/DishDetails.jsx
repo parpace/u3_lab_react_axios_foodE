@@ -26,17 +26,23 @@ export default function DishDetails () {
     }, [selectedDish])
     
     return (
-        <div className='categoryMealContainer'>
+        <div className='dishDetails'>
             {errorMessage ? (
                 <p style={{ color: 'red' }}>{errorMessage}</p>
             ) : (
-                <div>
-                    <img src={dish.strMealThumb} alt={dish.strMeal}/>
-                    <h1>{dish.strMeal}</h1>
-                    {/* ingredients here */}
-                    <h3>{dish.strInstructions}</h3>
+                <div className='dishDetail'>
+                    <img className="recipePic"src={dish.strMealThumb} alt={dish.strMeal}/>
+                    <h1 className='mealName'>{dish.strMeal}</h1>
+                    <ul className='ingredients'><li>{/* ingredients here */}</li></ul>
+                    <h3 className='instructions'>{dish.strInstructions}</h3>
                 </div>
             )}
         </div>
     )
 }
+
+// changes kass made 
+// added div classname above img
+// changed category classname
+// added classname to img 
+// added classname to h1 and h2

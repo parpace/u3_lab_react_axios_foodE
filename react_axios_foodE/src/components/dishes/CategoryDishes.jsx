@@ -29,15 +29,16 @@ export default function CategoryDishes () {
     
     return (
         <div className='categoryMealContainer'>
-            <h1>{selectedCategory} Dishes</h1>
+            <h1 className='pageTitle'>{selectedCategory}.</h1>
             {errorMessage ? (
                 <p style={{ color: 'red' }}>{errorMessage}</p>
             ) : (
                 <div className="categoryMealList">
                     {meals.map((meal) => (
-                        <Link key={meal.idMeal} to={`/dishes/${meal.idMeal}`}>
+                        <Link className="mealLink" key={meal.idMeal} to={`/dishes/${meal.idMeal}`}>
                             <div className="dish" key={meal.idMeal}>
-                                <h3 style={{backgroundImage: `url(${meal.strMealThumb})`}}>{meal.strMeal}</h3>
+                                <img className="mealImg" src={meal.strMealThumb}/>
+                                <h3 className='mealTitle'>{meal.strMeal}.</h3>
                             </div>
                         </Link>
                     ))}
@@ -46,3 +47,9 @@ export default function CategoryDishes () {
         </div>
     )
 }
+
+// changes kass made 
+// made background image into normal image
+// added classNames to img and h3
+// changed title and added classname
+// added classname to Link

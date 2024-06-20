@@ -28,17 +28,18 @@ export default function Header() {
     }
 
     return (
-        <div>
-            <Link to="/">
-                <h1 style={{ cursor: 'pointer' }}>THE RECIPE.</h1>
+        <div className='Header'>
+            <Link className="title-link" to="/">
+                <h1 className="page-title" style={{ cursor: 'pointer' }}>THE RECIPE.</h1>
             </Link>
             <form onSubmit={handleSubmit}>
                 <input 
                     type="text" 
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
+                    placeholder="search."
                 />
-                <h4>Search By</h4>
+                <h4 className='search-by'>search by</h4>
                 <select 
                     value={searchType} 
                     onChange={(e) => setSearchType(e.target.value)}
@@ -50,6 +51,18 @@ export default function Header() {
                 </select>
                 <button type="submit">Search</button>
             </form>
+            <div className='BlueCircle'></div>
+            <div className='BlueCircle2'></div> 
+            <div className='BlueCircle3'></div>
         </div>
     )
 }
+
+// edits kass made on this page 
+// className for h1
+// className for link
+// className h4
+// className header div
+// bluecircle divs
+// added input placeholder for accessibility 
+// search by to lowercase

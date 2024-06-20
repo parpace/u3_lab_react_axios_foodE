@@ -37,7 +37,10 @@ export default function Travel() {
 
     console.log(countries)
     return (
+        <div>
+            <h2 className="TravelText">TRAVEL.</h2>
         <div className="Countries">
+            
             <Carousel className="c-universe">
                 {countries.map((country, index) => (
                     index % 3 === 0 ? (
@@ -54,7 +57,7 @@ export default function Travel() {
                                                         alt={country.meals[0].mealName}
                                                     />
                                                     <div className="country-card-overlay">
-                                                        <h5 className="card-title">{country.countryName}</h5>
+                                                        <h5 className="card-title">{country.countryName}.</h5>
                                                     </div>
                                                 </div>
                                             </Link>
@@ -67,5 +70,6 @@ export default function Travel() {
                 ))}
             </Carousel>
         </div>
+       </div> 
     )
 }
