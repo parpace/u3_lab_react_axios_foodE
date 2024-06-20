@@ -11,6 +11,10 @@ export default function DishDetails () {
     const [errorMessage, setErrorMessage] = useState('')
     const { selectedDish } = useParams()
     const [count, setCount] = useState(0)
+
+
+
+    
   
 
     useEffect(() => {
@@ -48,9 +52,9 @@ export default function DishDetails () {
     const addCount = () => {
         setCount(count + 1)
       }
+      
 
-
-
+      
     
     return (
         <div className='dishDetails'>
