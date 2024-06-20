@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from 'axios'
+import Likes from './likes'
+import Input from './Input'
 
 export default function DishDetails () {
     
     const [dish, setDish] = useState('')
     const [errorMessage, setErrorMessage] = useState('')
     const { selectedDish } = useParams()
+  
 
     useEffect(() => {
         const getDish = async () => {
@@ -24,6 +27,9 @@ export default function DishDetails () {
         }
         getDish()
     }, [selectedDish])
+
+
+
     
     return (
         <div className='categoryMealContainer'>
@@ -37,6 +43,8 @@ export default function DishDetails () {
                     <h3>{dish.strInstructions}</h3>
                 </div>
             )}
+        
         </div>
+        
     )
 }

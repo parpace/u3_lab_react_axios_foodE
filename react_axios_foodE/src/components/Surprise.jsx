@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 
+
 const RandomDetails = () => {
   const [random, setRandom] = useState([])
 
@@ -26,6 +27,7 @@ const RandomDetails = () => {
             </div>
         </div>
     </div>
+    
   )
 }
 
