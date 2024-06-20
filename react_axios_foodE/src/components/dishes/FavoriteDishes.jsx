@@ -48,7 +48,7 @@ export default function FavoriteDishes () {
                                 <h3 className='mealTitle'>{dish.strMeal}</h3>
                             </Link>
                             <button 
-                                className='favButton' 
+                                className='unfavButton' 
                                 onClick={() => removeFromFavorites(dish.idMeal)}>
                                 Remove From Favorites
                             </button>

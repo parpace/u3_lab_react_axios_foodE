@@ -81,10 +81,10 @@ h3, h5 {
 
 .TravelText {
   position: relative;
-  color:#7689DE;
-  margin-left:4%;
+  color: #7689DE;
+  margin-left: 20%;
   margin-bottom: 12px;
-  text-shadow:  2px 1px #FF7653;
+  text-shadow: 2px 1px #FF7653;
 }
 
 /* HEADER STYLING */
@@ -98,7 +98,9 @@ h3, h5 {
   margin-bottom: 200px;
   margin-top: 70px;
 }
-
+form {
+  margin-top: -40px;
+}
 .page-title, form {
   z-index: 2;
   position: relative;
@@ -135,12 +137,25 @@ h3{
     color: white;
 }
 .page-title {
-  margin-left: -100%;
+  margin-left: -90%;
   font-size: 400%;
   letter-spacing: .5rem;
 } 
+.favorites-link{
+  text-decoration: none;
+  color: white;
+}
 
-input { 
+.favoritesText {
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.favoritesText:hover{
+  color: #FF7653;
+}
+
+input, textarea{ 
   border: none;
   border-radius: 5px;
   padding: 5px;
@@ -148,7 +163,7 @@ input {
   font-weight: 200;
 }
 
-input:focus {
+input:focus, textarea:focus {
   outline: 2px solid #7689DE;
 }
 
@@ -168,6 +183,7 @@ select {
   color: white;
   margin-left: -2vw;
 }
+
 
 /* SURPRISE STYLING */
 
@@ -333,10 +349,11 @@ select {
 }
 .instructions {
   line-height: 1.6; 
-  text-transform: lowercase;
   font-weight: 400;
   text-indent: 1em;
   color:#7689DE;
+  width: 100vw;
+  max-width: 50%;
 }
 
 .instructions::before {
@@ -434,7 +451,7 @@ margin-top: 20%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  gap: 10%;
+  gap: 3%;
   margin: 0 auto;
   margin-top: 50px;
 }
@@ -443,8 +460,90 @@ margin-top: 20%;
   margin-left: 1rem;
 }
 
+.buttons {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 90px;
+  justify-content: space-between;
+  gap: 160%;
+}
+
+.Like {
+  width: 20px;
+  height: 20px;
+}
+.likecount {
+  margin-left: -153%;
+  margin-right: 130%;
+  font-family: "Urbanist", sans-serif;
+  color: #7689DE;
+  font-weight: 900;
+}
+
+.favButton, .Button, .unfavButton{
+  background-color: #FF7653;
+  font-family: "Urbanist", sans-serif;
+  color:white;
+
+}
+
+.favButton:active, .Button:active, .unfavButton:active{
+  background-color: #7689DE;
+}
 /* footer */
+
 
 .footer{
   font-size: larger;
+  margin-right: 500p
+}
+
+.mealform {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#ingredients, #instruction {
+  height: 30px;
+  border: none;
+  border-radius: 5px;
+}
+.psubmit {
+  margin-bottom: 50px;
+  color:#A9BCE3;
+  font-style: italic;
+}
+.recipesubmit {
+  font-family: "urbanist", sans-serif;
+  font-size: 2em;
+  color:#FF7653
+}
+.Button{
+  width: 100px;
+  margin-left:90px;
+}
+
+.MealLabel {
+  font-family: "Urbanist", sans-serif;
+  color:#7689DE;
+}
+
+
+
+.submitAll {
+  margin-right: 50vw;
+}
+
+.unfavButton {
+ padding: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin: 0 auto;
+ margin-top: -20px;
+}
+
+.favoriteDishesContainer {
+  margin-bottom: 190px;
 }
