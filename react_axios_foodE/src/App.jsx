@@ -1,3 +1,5 @@
+import { useState } from 'react'
+import FavoriteContext from './FavoriteContext'
 import './App.css'
 import Header from './components/Header'
 import Main from './components/Main'
@@ -6,11 +8,15 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
 
+  const [favorites, setFavorites] = useState([])
+
   return (
     <>
-      <Header/>
-      <Main/>
-      <Footer/>
+      <FavoriteContext.Provider value={{favorites, setFavorites}}>
+        <Header/>
+        <Main/>
+        <Footer/>
+      </FavoriteContext.Provider>
     </>
   )
 }
