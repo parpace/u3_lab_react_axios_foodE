@@ -1,6 +1,6 @@
 const Likes = (props) => {
     return (
-      <div class="likecount">
+      <div className="likecount">
     {props.count}
       </div>
     );
